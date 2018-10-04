@@ -6,11 +6,11 @@
 
 - name: install mysql
   apt:
-    name: "{{ item }}"
+    name: [u'mysql-server', u'mysql-client']
     update_cache: yes
-  with_items:
-    - mysql-server
-    - mysql-client
+#  with_items:
+ #   - mysql-server
+  #  - mysql-client
 
 - name: install mysql python module
   apt:
