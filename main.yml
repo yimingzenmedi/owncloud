@@ -14,7 +14,7 @@
     #
     - include_tasks: tasks/instance_common.yml
     # Create a new GCP instance
-<<<<<<< HEAD
+
     - include_tasks: tasks/instance.yml instance_name="{{ instances.name }}" instance_group="{{ instances.group }}"
       with_items:
 #         - {name: loadbalancer, group: loadbalancer}
@@ -24,10 +24,9 @@
 #         - {name: nfs, group: nfs}
         #- {name: backup, group: backup}
         #- {name: ldap, group: ldap}
-=======
+
     - include_tasks: tasks/instance.yml instance_name="{{ instances.name }}" instance_group="{{ instances.group }}" instance_tags="{{ instances.tags }}"
       with_items: "{{ instances }}"
->>>>>>> 7c030f8d30cc9fd3f0e5e9da9c6efa7451fc5a72
       loop_control:
         loop_var: instances
 
